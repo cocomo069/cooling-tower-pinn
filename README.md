@@ -10,7 +10,7 @@ parametric CFD study in ANSYS Fluent, then train a network that reproduces the f
 temperature and velocity field for operating points it never saw, in milliseconds
 instead of a solver run, while respecting mass conservation.
 
-![Wind-dominated case: plumes bend over onto downwind towers](figures/pv_c3_slice_T.png)
+![Wind-dominated case: plumes bend over onto downwind towers](03_Figures/pv_c3_slice_T.png)
 
 ## What is in here
 
