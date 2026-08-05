@@ -1,0 +1,28 @@
+# Large CFD binaries and intermediate data (regenerate with the scripts)
+cfd/cases/
+cfd/mesh/
+data/
+*.msh
+*.cas.h5
+*.dat.h5
+*.npz
+!pinn/pinn_params.npz
+
+# Solver transcripts, journals, logs, timing
+*_transcript.txt
+*.jou
+*.out
+timing.txt
+genlog.txt
+
+# Private / not for publication
+outreach.md
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
