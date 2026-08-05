@@ -23,8 +23,6 @@ instead of a solver run, while respecting mass conservation.
 | `figures/` | Result figures (ParaView contours and matplotlib charts). |
 | `report/` | Full technical report. |
 
-Large binaries (the Fluent mesh, case/data files, and the per-case field `.npz`) are not
-tracked here; regenerate them with the scripts below.
 
 ## The case
 
@@ -77,29 +75,6 @@ held out entirely. On that unseen case it reconstructs the temperature field to
 This is a deliberate demonstrator: coarse RANS, a small network, and a mass-conservation
 constraint that is only part of the governing physics. It shows the shape of the workflow,
 not a production model.
-
-## Reproducing
-
-```bash
-# 1. Mesh (needs gmsh)
-python cfd/mesh_gen.py cfd/mesh/tower_array.msh 2.0 12.0
-
-# 2. Solve the 7 cases in ANSYS Fluent (2021 R1) from the TUI journals, then
-#    extract each solved case to a field .npz
-python cfd/extract_field.py cfd/cases/case_c1 3 6 data/c1_field.npz
-# ... repeat for c2..c7
-
-# 3. Analyse + figures
-python pinn/analyze.py data figures
-
-# 4. Train the surrogate (resumable in chunks)
-python pinn/pinn_surrogate.py chunk 130
-# ... repeat until converged, then:
-python pinn/pinn_surrogate.py finalize
-```
-
-Dependencies: `gmsh`, `numpy`, `h5py`, `matplotlib`, `autograd`, plus ANSYS Fluent for the
-CFD step. ParaView was used for the contour figures.
 
 ## License
 

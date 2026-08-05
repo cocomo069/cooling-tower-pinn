@@ -1,0 +1,101 @@
+
+              Welcome to ANSYS Fluent 2021 R1
+
+              Copyright 1987-2021 ANSYS, Inc. All Rights Reserved.
+              Unauthorized use, distribution or duplication is prohibited.
+              This product is subject to U.S. laws governing export and re-export.
+              For full Legal Notice, see documentation.
+
+Build Time: Nov 20 2020 15:49:18 EST  Build Id: 10179  
+ 
+Host spawning Node 0 on machine "DESKTOP-GVB673E" (win64).
+
+----------------------------------------------------------------------------------
+ID    Hostname         Core  O.S.         PID    Vendor                          
+----------------------------------------------------------------------------------
+n3    DESKTOP-GVB673E  4/12  Windows-x64  75284  Intel(R) Core(TM) i7-8850H      
+n2    DESKTOP-GVB673E  3/12  Windows-x64  73408  Intel(R) Core(TM) i7-8850H      
+n1    DESKTOP-GVB673E  2/12  Windows-x64  56700  Intel(R) Core(TM) i7-8850H      
+n0*   DESKTOP-GVB673E  1/12  Windows-x64  64444  Intel(R) Core(TM) i7-8850H      
+host  DESKTOP-GVB673E        Windows-x64  56948  Intel(R) Core(TM) i7-8850H      
+
+MPI Option Selected: intel
+Selected system interconnect: default
+----------------------------------------------------------------------------------
+
+
+
+Cleanup script file is D:\paid tasks\chiller_airflow_modeling_godela\cooling_tower_plume_pinn\cfd\cases\\cleanup-fluent-DESKTOP-GVB673E-76156.bat
+
+Reading journal file D:\paid tasks\chiller_airflow_modeling_godela\cooling_tower_plume_pinn\cfd\cases\claude_2e99372d.jou...
+
+> /file/read-case "D:\paid tasks\chiller_airflow_modeling_godela\cooling_tower_plume_pinn\cfd\mesh\tower_array.msh"
+Reading "D:\paid tasks\chiller_airflow_modeling_godela\cooling_tower_plume_pinn\cfd\mesh\tower_array.msh"...
+
+Buffering for file scan...
+
+   20201 nodes.
+  105676 tetrahedral cells, zone  2.
+  206623 triangular interior faces, zone  3.
+     200 triangular velocity-inlet faces, zone  4.
+     198 triangular pressure-outlet faces, zone  5.
+     802 triangular symmetry faces, zone  6.
+     676 triangular symmetry faces, zone  7.
+    5168 triangular wall faces, zone  8.
+     540 triangular velocity-inlet faces, zone  9.
+    1874 triangular wall faces, zone 10.
+
+Building...
+     mesh
+	auto partitioning mesh by Metis (fast),
+	distributing mesh
+		parts....,
+		faces....,
+		nodes....,
+		cells....,
+        bandwidth reduction using Reverse Cuthill-McKee: 26352/743 = 35.467
+     materials,
+     interface,
+     domains,
+     zones,
+	fluid
+	tower_walls
+	tower_top
+	ground
+	top
+	sides
+	outlet
+	inlet
+	interior
+     parallel,
+Done.
+
+
+> /mesh/check
+
+ Domain Extents:
+   x-coordinate: min (m) = -6.000000e+01, max (m) = 2.200000e+02
+   y-coordinate: min (m) = -7.000000e+01, max (m) = 7.000000e+01
+   z-coordinate: min (m) = 0.000000e+00, max (m) = 8.000000e+01
+ Volume statistics:
+   minimum volume (m3): 2.916565e-01
+   maximum volume (m3): 9.373434e+02
+     total volume (m3): 3.127360e+06
+ Face area statistics:
+   minimum face area (m2): 6.920626e-01
+   maximum face area (m2): 2.116813e+02
+ Checking mesh....................................
+Done.
+ 
+> /mesh/quality
+
+Mesh Quality:
+
+Minimum Orthogonal Quality =  1.35583e-01 cell 21686 on zone 2 (ID: 91188 on partition: 1) at location ( 1.07769e+02,  4.75578e+01,  9.39360e-01)
+(To improve Orthogonal quality , use "Inverse Orthogonal Quality" in Fluent Meshing,
+ where Inverse Orthogonal Quality = 1 - Orthogonal Quality)
+
+Maximum Aspect Ratio =  1.04104e+01 cell 21686 on zone 2 (ID: 91188 on partition: 1) at location ( 1.07769e+02,  4.75578e+01,  9.39360e-01)
+
+> exit
+> Halting due to end of file on input.

@@ -1,12 +1,7 @@
-# Large CFD binaries and intermediate data (regenerate with the scripts)
-cfd/cases/
-cfd/mesh/
-data/
-*.msh
-*.cas.h5
-*.dat.h5
-*.npz
-!pinn/pinn_params.npz
+# Python cache
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
 
 # Solver transcripts, journals, logs, timing
 *_transcript.txt

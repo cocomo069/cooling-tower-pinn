@@ -1,0 +1,93 @@
+
+              Welcome to ANSYS Fluent 2021 R1
+
+              Copyright 1987-2021 ANSYS, Inc. All Rights Reserved.
+              Unauthorized use, distribution or duplication is prohibited.
+              This product is subject to U.S. laws governing export and re-export.
+              For full Legal Notice, see documentation.
+
+Build Time: Nov 20 2020 15:49:18 EST  Build Id: 10179  
+ 
+Host spawning Node 0 on machine "DESKTOP-GVB673E" (win64).
+
+----------------------------------------------------------------------------------
+ID    Hostname         Core  O.S.         PID    Vendor                          
+----------------------------------------------------------------------------------
+n3    DESKTOP-GVB673E  4/12  Windows-x64  31584  Intel(R) Core(TM) i7-8850H      
+n2    DESKTOP-GVB673E  3/12  Windows-x64  62848  Intel(R) Core(TM) i7-8850H      
+n1    DESKTOP-GVB673E  2/12  Windows-x64  38484  Intel(R) Core(TM) i7-8850H      
+n0*   DESKTOP-GVB673E  1/12  Windows-x64  75888  Intel(R) Core(TM) i7-8850H      
+host  DESKTOP-GVB673E        Windows-x64  74928  Intel(R) Core(TM) i7-8850H      
+
+MPI Option Selected: intel
+Selected system interconnect: default
+----------------------------------------------------------------------------------
+
+
+
+Cleanup script file is D:\paid tasks\chiller_airflow_modeling_godela\cooling_tower_plume_pinn\cfd\cases\\cleanup-fluent-DESKTOP-GVB673E-75580.bat
+
+Reading journal file D:\paid tasks\chiller_airflow_modeling_godela\cooling_tower_plume_pinn\cfd\cases\claude_8125c002.jou...
+
+> /file/read-case "D:\paid tasks\chiller_airflow_modeling_godela\cooling_tower_plume_pinn\cfd\mesh\tower_array.msh"
+Reading "D:\paid tasks\chiller_airflow_modeling_godela\cooling_tower_plume_pinn\cfd\mesh\tower_array.msh"...
+
+Buffering for file scan...
+
+   20201 nodes.
+  105676 tetrahedral cells, zone  2.
+  206623 triangular interior faces, zone  3.
+     200 triangular velocity-inlet faces, zone  4.
+     198 triangular pressure-outlet faces, zone  5.
+     802 triangular symmetry faces, zone  6.
+     676 triangular symmetry faces, zone  7.
+    5168 triangular wall faces, zone  8.
+     540 triangular velocity-inlet faces, zone  9.
+    1874 triangular wall faces, zone 10.
+
+Building...
+     mesh
+	auto partitioning mesh by Metis (fast),
+	distributing mesh
+		parts....,
+		faces....,
+		nodes....,
+		cells....,
+        bandwidth reduction using Reverse Cuthill-McKee: 26352/743 = 35.467
+     materials,
+     interface,
+     domains,
+     zones,
+	fluid
+	tower_walls
+	tower_top
+	ground
+	top
+	sides
+	outlet
+	inlet
+	interior
+     parallel,
+Done.
+
+
+> /define/models/energy yes
+Compute viscous energy dissipation? [no] /define/models/viscous/ke-realizable Please answer y[es] or n[o].
+yes
+Include diffusion at inlets? [yes] /define/boundary-conditions/set/velocity-inlet Please answer y[es] or n[o].
+inlet Please answer y[es] or n[o].
+()Please answer y[es] or n[o].
+ info Please answer y[es] or n[o].
+q
+Please answer y[es] or n[o].
+Include diffusion at inlets? [yes] /define/boundary-conditions/set/pressure-outlet Please answer y[es] or n[o].
+outlet Please answer y[es] or n[o].
+()Please answer y[es] or n[o].
+ info Please answer y[es] or n[o].
+q
+Please answer y[es] or n[o].
+Include diffusion at inlets? [yes] /define/materials/list-materials
+Please answer y[es] or n[o].
+Include diffusion at inlets? [yes] exitPlease answer y[es] or n[o].
+
+> Halting due to end of file on input.
